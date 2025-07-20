@@ -52,7 +52,7 @@ int main()
 ### 測試案例
 
 1
-![遞迴阿克曼函數]([https://github.com/joshu0601/NFU_CSIE_DataStructure_HomeWork2NFU_CSIE_DataStructure_HomeWork1/blob/main/ackerman_recursive.png](https://github.com/Adsgfjhk/data-structure/blob/main/homework1/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202025-07-21%20013201.png))
+(https://github.com/Adsgfjhk/data-structure/blob/main/homework1/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202025-07-21%20013201.png))
 
 
 
