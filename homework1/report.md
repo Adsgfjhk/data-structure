@@ -51,7 +51,8 @@ int main()
 
 ### 測試案例
 
-1
+1、m = 0, n <= 9223372036854775806
+
 ![1](https://github.com/Adsgfjhk/data-structure/blob/main/homework1/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202025-07-21%20013201.png))
 
 
