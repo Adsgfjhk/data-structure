@@ -118,6 +118,8 @@ int main()
 利用維基百科阿克曼函數表中的 n 公式，用 switch 來判斷 m 的數值，並做
 出對應的解題方法。
 
+![公式](https://github.com/Adsgfjhk/data-structure/blob/main/homework1/%E5%85%AC%E5%BC%8F.png)
+
 
 ## 程式實作
 
