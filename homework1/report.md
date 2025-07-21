@@ -44,8 +44,8 @@ int main()
 
 ## 效能分析
 
-1. 時間複雜度：阿克曼函數的遞迴成長過快，超過了 Big o 的範圍，算不出來。
-2. 空間複雜度：阿克曼函數的遞迴成長過快，超過了 Big o 的範圍，算不出來。
+1. 時間複雜度：阿克曼函數的遞迴成長過快，超過了 Big O 的範圍，算不出來。
+2. 空間複雜度：阿克曼函數的遞迴成長過快，超過了 Big O 的範圍，算不出來。
 
 ## 測試與驗證
 
@@ -182,21 +182,25 @@ if (n > = 4)
 
 ### 測試案例
 
-| 測試案例 | 輸入參數 $n$ | 預期輸出 | 實際輸出 |
-|----------|--------------|----------|----------|
-| 測試一   | $n = 0$      | 0        | 0        |
-| 測試二   | $n = 1$      | 1        | 1        |
-| 測試三   | $n = 3$      | 6        | 6        |
-| 測試四   | $n = 5$      | 15       | 15       |
-| 測試五   | $n = -1$     | 異常拋出 | 異常拋出 |
+1、m = 0, n <= 9223372036854775806
 
-### 編譯與執行指令
+![1](https://github.com/Adsgfjhk/data-structure/blob/main/homework1/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202025-07-21%20013201.png)
 
-```shell
-$ g++ -std=c++17 -o sigma sigma.cpp
-$ ./sigma
-6
-```
+2、m = 1, n <= 9223372036854775805
+
+![2](https://github.com/Adsgfjhk/data-structure/blob/main/homework1/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202025-07-21%20020233.png)
+
+3、m = 2, n <= 4611686018427387902
+
+![3](https://github.com/Adsgfjhk/data-structure/blob/main/homework1/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202025-07-21%20020302.png)
+
+4、m = 3, n <= 59
+
+![4](https://github.com/Adsgfjhk/data-structure/blob/main/homework1/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202025-07-21%20020321.png)
+
+5、m = 4, n <= 2
+
+![5](https://github.com/Adsgfjhk/data-structure/blob/main/homework1/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202025-07-21%20020333.png)
 
 ### 結論
 
@@ -290,21 +294,15 @@ int main()
 
 ### 測試案例
 
-| 測試案例 | 輸入參數 $n$ | 預期輸出 | 實際輸出 |
-|----------|--------------|----------|----------|
-| 測試一   | $n = 0$      | 0        | 0        |
-| 測試二   | $n = 1$      | 1        | 1        |
-| 測試三   | $n = 3$      | 6        | 6        |
-| 測試四   | $n = 5$      | 15       | 15       |
-| 測試五   | $n = -1$     | 異常拋出 | 異常拋出 |
+1、有18 個數字，總共要跑13.372 秒。
 
-### 編譯與執行指令
+![1](https://github.com/Adsgfjhk/data-structure/blob/main/homework1/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202025-07-21%20013201.png)
 
-```shell
-$ g++ -std=c++17 -o sigma sigma.cpp
-$ ./sigma
-6
-```
+2、有20 個數字，總共要跑52.217 秒。
+
+![2](https://github.com/Adsgfjhk/data-structure/blob/main/homework1/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202025-07-21%20020233.png)
+
+
 
 ### 結論
 
