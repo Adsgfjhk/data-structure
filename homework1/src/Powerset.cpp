@@ -14,7 +14,7 @@ void powerset(string s, string a, int n)
 int main()
 {
 	string x;
-	string a;//使用第二個字串來儲存要輸出的資料
+	string a;
 	cin >> x;
 	clock_t start = clock();
 	powerset(x, a, 0);
