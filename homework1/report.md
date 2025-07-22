@@ -31,13 +31,12 @@ int main()
 	long long a;
 	double start, end; //獲取時間用
 	double cost;
-	start = clock(); //計時開始
+	clock_start = clock(); //計時開始
 	cin >> m >> n;
 	a = Ackermann(m, n);
 	cout << a << endl;
-	end = clock(); //計時結束
-	cost = end - start; //計算時間差
-	cout << "時間差：" << cost / 1000 << "秒" << endl;
+	clock_t = clock(); //計時結束
+	cout << "花費時間：" << double(stop - start)/CLOCKS_PER_SEC << "秒" << endl;
 }
 
 ```
