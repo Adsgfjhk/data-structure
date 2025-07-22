@@ -106,15 +106,13 @@ int main()
 
 ```cpp
 #include <iostream>
-#include <cmath>
 using namespace std;
 int main()
 {
 	long long m, n, ans = 0;
-	double start, end, cost;
 	int x = 2;
 	cin >> m >> n;
-	start = clock();
+	clock_t start = clock();
 	switch (m)//看 m 的不同來對應相對的公式
 	{
 	case 0:
@@ -139,9 +137,8 @@ int main()
 		break;
 	}
 	cout << n << endl;
-	end = clock();
-	cost = end - start;
-	cout << "時間差：" << cost / 1000 << "秒" << endl;
+	clock_t stop = clock();
+	cout << "時間差：" <<  << "秒" << endl;
 }
 
 
