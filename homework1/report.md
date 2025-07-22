@@ -237,7 +237,7 @@ int main()
 	clock_t start = clock();
 	powerset(x, a, 0);//n 為記錄該遞迴程式是否到底了
 	clock_t stop = clock();
-	cout << "時間差：" << double(stop - start) / CLOCKS_PER_SEC << endl;
+	cout << "花費時間：" << double(stop - start) / CLOCKS_PER_SEC << endl;
 }
 
 
