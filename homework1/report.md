@@ -5,7 +5,7 @@
 ### Ackermann’s function – recursive
 ## 解題說明
 
-利用題目給的公式，用 if 來判斷當時的情況並作相對應的處理。
+利用題目給的公式，用 `if` 來判斷當時的情況並作相對應的處理。
 
 
 ## 程式實作
@@ -74,7 +74,7 @@ int main()
 
 ### 結論
 
-輸入兩個正整數m和n，通過遞迴實現Ackermann函數。
+輸入兩個正整數`m`和`n`，通過遞迴實現Ackermann函數。
 
 ## 申論及開發報告
 
@@ -98,7 +98,7 @@ int main()
 ### Ackermann’s function – nonrecursive
 ## 解題說明
 
-利用維基百科阿克曼函數表中的 `n` 公式，用 switch 來判斷 m 的數值，並做
+利用維基百科阿克曼函數表中的 `n` 公式，用 `switch` 來判斷 `m` 的數值，並做
 出對應的解題方法。
 
 ![公式](https://github.com/Adsgfjhk/data-structure/blob/main/homework1/%E5%85%AC%E5%BC%8F.png)
@@ -274,7 +274,7 @@ int main()
 
 ### 結論
 
-輸入字串x，powerset 函數採用遞迴方式，輸出輸入字串的所有子集合，包括空集合，並以括號格式顯示。
+輸入字串 `x` ， `powerset` 函數採用遞迴方式，輸出輸入字串的所有子集合，包括空集合，並以括號格式顯示。
 
 ## 申論及開發報告
 
