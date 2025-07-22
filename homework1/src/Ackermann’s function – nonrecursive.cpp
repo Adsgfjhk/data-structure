@@ -1,13 +1,11 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 int main()
 {
 	long long m, n, ans = 0;
-	double start, end, cost;
 	int x = 2;
 	cin >> m >> n;
-	start = clock();
+	clock_t start = clock();
 	switch (m)
 	{
 	case 0:
@@ -32,9 +30,9 @@ int main()
 		break;
 	}
 	cout << n << endl;
-	end = clock();
+	clock_t stop = clock();
 	cost = end - start;
-	cout << "時間差：" << cost / 1000 << "秒" << endl;
+	cout << "花費時間：" << double(stop - start) / CLOCKS_PER_SEC << "秒" << endl;
 }
 
 
