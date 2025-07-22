@@ -138,7 +138,7 @@ int main()
 	}
 	cout << n << endl;
 	clock_t stop = clock();
-	cout << "時間差：" <<  << "秒" << endl;
+	cout << "時間差：" << double(stop - start) / CLOCKS_PER_SEC << "秒" << endl;
 }
 
 
@@ -233,13 +233,11 @@ int main()
 {
 	string x;
 	string a;//使用第二個字串來儲存要輸出的資料
-	double start, end, cost;
 	cin >> x;
-	start = clock();
+	clock_t start = clock();
 	powerset(x, a, 0);//n 為記錄該遞迴程式是否到底了
-	end = clock();
-	cost = end - start;
-	cout << "時間差：" << cost / 1000 << endl;
+	clock_t stop = clock();
+	cout << "時間差：" << double(stop - start) / CLOCKS_PER_SEC << endl;
 }
 
 
