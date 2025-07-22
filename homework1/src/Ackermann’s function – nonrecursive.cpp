@@ -31,7 +31,6 @@ int main()
 	}
 	cout << n << endl;
 	clock_t stop = clock();
-	cost = end - start;
 	cout << "花費時間：" << double(stop - start) / CLOCKS_PER_SEC << "秒" << endl;
 }
 
