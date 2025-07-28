@@ -187,10 +187,12 @@ int main() {
 	cin >> p2;
 	cout << "請輸入X的值";
 	cin >> x;
-
+        clock_t start = clock(); //計時開始
 	cout << "p1.Eval(x)    = " << p1.Eval(x) << endl;
 	cout << "p2.Eval(x)    = " << p2.Eval(x) << endl;
 	cout << "p1.Add(p2)    = " << p1.Add(p2) << endl;
 	cout << "p1.Mult(p2)   = " << p1.Mult(p2) << endl;
+	clock_t stop = clock(); //計時結束
+	cout << "花費時間：" << double(stop - start) / CLOCKS_PER_SEC << "秒" << endl;
 	return 0;
 }
