@@ -2,7 +2,7 @@
 
 作業二
 
-### Ackermann’s function – recursive
+### Polynomial
 ## 解題說明
 
 加法功能(Add):
