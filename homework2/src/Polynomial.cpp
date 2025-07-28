@@ -39,48 +39,47 @@ void Polynomial::NewTerm(const int newCoef, const int newExp) {
 	termArray[terms].coef = newCoef;
 	termArray[terms++].exp = newExp;
 }
-float Polynomial::Eval(float f) 
-{ //多項式求值
-	int total = 0;
-	for (int i = 0; i < terms; i++) { //走訪terms
-		total += termArray[i].coef * pow(f, termArray[i].exp);
-	}
-	return total; //回傳最終計算值
+// 計算多項式在給定值 x 的結果
+float Polynomial::Eval(float value) {
+    float result = 0;
+    // 對每個項計算：係數 * value^指數
+    for (int i = 0; i < termCount; i++) {
+        result += termsArray[i].coefficient * pow(value, termsArray[i].exponent);
+    }
+    return result;
 }
-Polynomial Polynomial::Add(Polynomial poly) {
-	Polynomial ans;
-	int a = 0, b = 0;
+Polynomial Polynomial::Add(Polynomial other) {
+    Polynomial result;
+    int thisIndex = 0, otherIndex = 0;
 
-	while ((a < terms) && (b < poly.terms))
-	{
-		if (termArray[a].exp == poly.termArray[b].exp)
-		{
-			float x = termArray[a].coef + poly.termArray[b].coef;
-			if (x)
-				ans.NewTerm(x, termArray[a].exp);
-			a++;
-			b++;
-		}
-		else if (termArray[a].exp < poly.termArray[b].exp)
-		{
-			ans.NewTerm(poly.termArray[b].coef, poly.termArray[b].exp);
-			b++;
-		}
-		else
-		{
-			ans.NewTerm(termArray[a].coef, termArray[a].exp);
-			a++;
-		}
-	}
-	for (; a < terms; a++)
-	{
-		ans.NewTerm(termArray[a].coef, termArray[a].exp);
-	}
-	for (; b < terms; b++)
-	{
-		ans.NewTerm(poly.termArray[b].coef, poly.termArray[b].exp);
-	}
-	return ans;
+    // 根據指數合併兩個多項式的項
+    while (thisIndex < termCount && otherIndex < other.termCount) {
+        if (termsArray[thisIndex].exponent == other.termsArray[otherIndex].exponent) {
+            // 相同指數：係數相加
+            float sum = termsArray[thisIndex].coefficient + other.termsArray[otherIndex].coefficient;
+            if (sum != 0)
+                result.NewTerm(sum, termsArray[thisIndex].exponent);
+            thisIndex++;
+            otherIndex++;
+        } else if (termsArray[thisIndex].exponent < other.termsArray[otherIndex].exponent) {
+            // 複製另一多項式的項
+            result.NewTerm(other.termsArray[otherIndex].coefficient, other.termsArray[otherIndex].exponent);
+            otherIndex++;
+        } else {
+            // 複製此多項式的項
+            result.NewTerm(termsArray[thisIndex].coefficient, termsArray[thisIndex].exponent);
+            thisIndex++;
+        }
+    }
+    // 複製此多項式剩餘的項
+    for (; thisIndex < termCount; thisIndex++) {
+        result.NewTerm(termsArray[thisIndex].coefficient, termsArray[thisIndex].exponent);
+    }
+    // 複製另一多項式剩餘的項
+    for (; otherIndex < other.termCount; otherIndex++) {
+        result.NewTerm(other.termsArray[otherIndex].coefficient, other.termsArray[otherIndex].exponent);
+    }
+    return result;
 }
 ostream& operator<<(ostream& os, const Polynomial& p) {
 	for (int i = 0; i < p.terms; i++) {
